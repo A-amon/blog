@@ -1,10 +1,16 @@
 import { useState, useRef } from 'react'
+import { isEmpty, isEmailValid } from '@functions/form'
 
 const useSubscribe = (onSubscribe) => {
     const [email, setEmail] = useState('')
     const emailError = useRef(null)
 
-    const validateForm = event => {
+    /**
+     * Validate submitted data - Email
+     * Display error if empty or invalid
+     * @param  {object} event
+     */
+    const validateForm = (event) => {
         if (isEmpty(email)) {
             event.preventDefault()
             setEmailError('This field cannot be empty')
@@ -18,16 +24,12 @@ const useSubscribe = (onSubscribe) => {
             onSubscribe({ email })
     }
 
-    const setEmailError = message => {
+    /**
+     * Display error for email input
+     * @param  {string} message
+     */
+    const setEmailError = (message) => {
         emailError.current.textContent = message
-    }
-
-    const isEmailValid = (email) => {
-        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-    }
-
-    const isEmpty = (value) => {
-        return value.replace(' ', '').length === 0
     }
 
     return {
