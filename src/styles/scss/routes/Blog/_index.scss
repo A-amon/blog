@@ -1,0 +1,8 @@
+@import 'header';
+
+.r-blog{
+    &__content-text{
+        font-size: $fs-regular;
+        text-align: justify;
+    }
+}

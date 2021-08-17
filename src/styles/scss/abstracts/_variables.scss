@@ -8,6 +8,7 @@ $c-indianred:hsl(0, 53%, 58%);
 
 // Box shadows
 $bs-1:0 0 5px rgba(0,0,0,0.1);
+$bs-2:0 3px 10px rgba(0,0,0,0.1);
 
 // Font families
 $ff-roboto:'Roboto', sans-serif;
@@ -16,6 +17,11 @@ $ff-montserrat:'Montserrat', sans-serif;
 // Font weights
 $fw-regular:400;
 $fw-bold:700;
+
+// Font sizes
+$fs-xs: 0.8rem;
+$fs-s:0.9rem;
+$fs-regular:1rem;
 
 // Device sizes
 $d-tablet:768px;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Text from './Text'
 import Searchbar from '@components/Searchbar'
 import Subscribe from '@components/Subscribe'
@@ -18,6 +19,14 @@ const Banner = ({ expandedSearchbar, onExpand, onSubscribe, searchValue, onSearc
             </Container>
         </section>
     )
+}
+
+Banner.propTypes = {
+    expandedSearchbar: PropTypes.bool,
+    onExpand: PropTypes.func,
+    onSubscribe: PropTypes.func,
+    searchValue: PropTypes.string,
+    onSearch: PropTypes.func
 }
 
 export default Banner

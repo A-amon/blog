@@ -1,0 +1,42 @@
+
+.c-blog__info{
+    .c-blog__authors{
+        display: flex;
+        align-items: center;
+        &-others{
+            display: block;
+            margin-top: -0.5rem;
+            margin-left: 0.3rem;
+            font-weight: $fw-regular;
+            color:$c-gray;
+            font-size: 0.8rem;
+        }
+    }
+
+    &-date{
+        margin-top: 0.5rem;
+        display: block;
+        color:$c-lightgray;
+        font-size: 0.8rem;
+    }
+
+    
+    &--full{
+        padding:1rem 0 1rem 0;
+        .c-blog__authors{
+            flex-direction: column;
+            align-items: unset;
+            justify-content: flex-start;
+        }
+
+        .c-blog__others{
+            padding-top: 0.3rem;
+            display: flex;
+            font-weight: $fw-regular;
+        }
+
+        .c-blog__other{
+            margin-right: 0.5rem;
+        }
+    }
+}

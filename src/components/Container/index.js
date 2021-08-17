@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 const Container = ({ className, children }) => {
     return (
-        <div className={`container ${className}`}>
+        <div className={`container ${className ? className : ''}`}>
             {children}
         </div>
     )
@@ -10,7 +10,10 @@ const Container = ({ className, children }) => {
 
 Container.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.object
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object
+    ])
 }
 
 export default Container
