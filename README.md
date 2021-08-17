@@ -8,7 +8,7 @@ This is a simple blog site with two pages only.
 ## Functions
 * Display all blogs
 * Display specific blog by Id
-* Filter blogs
+* Filter blogs by title, main author, secondary author
 
 ## API 
 The API used is provided by SoftwareQ
