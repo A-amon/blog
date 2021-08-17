@@ -1,4 +1,5 @@
 
 module.exports = {
-    HomeRoute: '/'
+    HomeRoute: '/',
+    BlogRoute: '/blog/:id'
 }

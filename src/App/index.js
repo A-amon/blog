@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { HomeRoute } from '@routes'
+import {
+  HomeRoute,
+  BlogRoute
+} from '@routes'
 import Home from '@routes/Home'
+import Blog from '@routes/Blog'
 import Header from '@layouts/Header'
 
 function App () {
@@ -10,6 +14,8 @@ function App () {
         <Header />
         <main>
           <Switch>
+            <Route path={BlogRoute}
+              component={Blog} />
             <Route path={HomeRoute}
               component={Home} />
           </Switch>
