@@ -2,11 +2,12 @@ import PropTypes from 'prop-types'
 import BlogInfo from '@components/Blog/Info'
 import Container from '@components/Container'
 
-const Header = ({ image, createdAt, mainAuthor, secondaryAuthor, otherAuthors }) => {
+const Header = ({ title, image, createdAt, mainAuthor, secondaryAuthor, otherAuthors }) => {
     return (
         <section className="r-blog__header">
             <Container>
                 <img className="r-blog__header-img" src={image} alt="" aria-hidden='true' />
+                <h1>{title}</h1>
                 <BlogInfo full={true}
                     createdAt={createdAt}
                     mainAuthor={mainAuthor}
@@ -18,6 +19,7 @@ const Header = ({ image, createdAt, mainAuthor, secondaryAuthor, otherAuthors })
 }
 
 Header.propTypes = {
+    title: PropTypes.string,
     image: PropTypes.string,
     mainAuthor: PropTypes.string,
     secondaryAuthor: PropTypes.string,

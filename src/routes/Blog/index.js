@@ -13,16 +13,15 @@ const Blog = () => {
 
     useEffect(() => {
         if (id) {
-            getBlog(id)
+            getBlog()
             getBlogs()
         }
     }, [])
 
     /**
      * Fetch blog by id
-     * @param  {number} id
      */
-    const getBlog = (id) => {
+    const getBlog = () => {
         getBlogById(id).then(data => {
             setBlog(data)
         })
@@ -33,14 +32,15 @@ const Blog = () => {
      */
     const getBlogs = () => {
         getAllBlogs().then(data => {
-            setBlogs(data)
+            setBlogs(data.filter(dataItem => dataItem.id !== parseInt(id)))
         })
     }
 
     return (
         <>
             {
-                blog && <Header image={blog.linkToHeaderImage}
+                blog && <Header title={blog.title}
+                    image={blog.linkToHeaderImage}
                     createdAt={blog.createdAtDateTimeOffset}
                     mainAuthor={blog.mainAuthor}
                     secondaryAuthor={blog.secondaryAuthor}
