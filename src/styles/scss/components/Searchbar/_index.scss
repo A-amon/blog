@@ -22,8 +22,11 @@
         overflow: hidden;
         border:none;
         font-weight: $fw-bold;
-        text-transform: uppercase;
         display: none;
+
+        &::placeholder{
+            text-transform: uppercase;
+        }
     }
 }
 

@@ -1,8 +1,14 @@
 @import 'text';
 
 .banner{
-    padding:5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    min-height: 500px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+
     &__searchbar{
         margin:auto;
         margin-bottom: 2rem;
