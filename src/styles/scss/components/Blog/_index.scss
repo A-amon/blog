@@ -1,0 +1,17 @@
+@import 'author';
+
+.blog{
+    max-width: 400px;
+    &__image{
+        border-radius: 10px;
+        overflow: hidden;
+        &-img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__details{
+        padding:1rem;
+    }
+}

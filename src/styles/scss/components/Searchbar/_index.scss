@@ -1,1 +1,37 @@
 @import 'button';
+
+.searchbar{
+    border-radius: 50px;
+    box-shadow: $bs-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+
+    &.expanded{
+        padding: 0.3rem 2rem;
+        .searchbar-input{
+            display: block;
+            animation:expandWidth 0.3s 1 forwards;
+        }
+    }
+
+    &-input{
+        padding:0.5rem 1rem;
+        width: 250px;
+        overflow: hidden;
+        border:none;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        display: none;
+    }
+}
+
+@keyframes expandWidth {
+    from{
+        width: 0;
+    }
+    to{
+        width: 250px;
+    }
+}
