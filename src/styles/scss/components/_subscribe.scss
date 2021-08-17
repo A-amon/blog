@@ -1,0 +1,56 @@
+
+.subscribe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__group{
+        position: relative;
+        width: 100%;
+    }
+
+    &-error{
+        position: absolute;
+        top:100%;
+        left:1.5rem;
+        font-size: 0.9rem;
+        color:$c-indianred;
+        margin-top:0.5rem;
+    }
+
+    &-input, &-button{
+        padding:1rem 2rem;
+        border-radius: 50px;
+        font-weight: $fw-bold;
+        width: 100%;
+    }
+
+    &-input{
+        border:1px solid $c-lightgray;
+        color:$c-gray;
+        text-transform: uppercase;
+        box-sizing: border-box;
+    }
+
+    &-button{
+        margin-top: 0.5rem;
+        color:$c-white;
+        background-color: $c-indianred;
+        transition:transform 0.3s;
+        &:hover{
+            transform:scale(0.9);
+        }
+    }
+
+    @include tablet-query{
+        &__group{
+            width: 350px;
+            margin-right: 0.5rem;
+        }
+        &-button{
+            max-width: fit-content;
+            margin-top: 0;
+        }
+    }
+}

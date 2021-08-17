@@ -1,0 +1,14 @@
+
+.container{
+    padding:0 2rem;
+
+    @include laptop-query{
+        padding:0 4rem;
+        max-width:$d-laptop;
+    }
+
+    @include laptop-l-query{
+        padding:0 10rem;
+        max-width:$d-laptop-l;
+    }
+}

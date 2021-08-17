@@ -1,0 +1,23 @@
+
+// Colors
+$c-white:hsl(0,0%,100%);
+$c-black:hsl(0,0%,0%);
+$c-gray:hsl(0,0%,50%);
+$c-lightgray:hsl(0,0%,80%);
+$c-indianred:hsl(0, 53%, 58%);
+
+// Box shadows
+$bs-1:0 0 5px rgba(0,0,0,0.1);
+
+// Font families
+$ff-roboto:'Roboto', sans-serif;
+$ff-montserrat:'Montserrat', sans-serif;
+
+// Font weights
+$fw-regular:400;
+$fw-bold:700;
+
+// Device sizes
+$d-tablet:768px;
+$d-laptop:1024px;
+$d-laptop-l:1440px;

@@ -1,0 +1,15 @@
+
+.header{
+    &__container{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        
+        &-logo{
+            font-family: $ff-montserrat;
+            font-size: 1.5rem;
+            color:$c-black;
+        }
+    }
+ 
+}

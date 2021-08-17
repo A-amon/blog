@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap");
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, button {
+  font-family: inherit;
+}
+
+input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blogs {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 0 10rem;
+    max-width: 1440px;
+  }
+}
+
+.blog {
+  max-width: 400px;
+}
+
+.blog__image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog__image-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog__details {
+  padding: 1rem;
+}
+
+.searchbar__button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.searchbar__button.not-clickable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.searchbar__button:hover {
+  background-color: #cccccc;
+}
+
+.searchbar__button:hover .searchbar__button-icon {
+  fill: white;
+}
+
+.searchbar__button-icon {
+  height: 1.3rem;
+  width: 1.3rem;
+  fill: gray;
+  pointer-events: none;
+}
+
+.searchbar {
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.searchbar.expanded {
+  padding: 0.3rem 2rem;
+}
+
+.searchbar.expanded .searchbar-input {
+  display: block;
+  -webkit-animation: expandWidth 0.3s 1 forwards;
+          animation: expandWidth 0.3s 1 forwards;
+}
+
+.searchbar-input {
+  padding: 0.5rem 1rem;
+  width: 250px;
+  overflow: hidden;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: none;
+}
+
+@-webkit-keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.subscribe__group {
+  position: relative;
+  width: 100%;
+}
+
+.subscribe-error {
+  position: absolute;
+  top: 100%;
+  left: 1.5rem;
+  font-size: 0.9rem;
+  color: #cd5b5b;
+  margin-top: 0.5rem;
+}
+
+.subscribe-input, .subscribe-button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.subscribe-input {
+  border: 1px solid #cccccc;
+  color: gray;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.subscribe-button {
+  margin-top: 0.5rem;
+  color: white;
+  background-color: #cd5b5b;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.subscribe-button:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__group {
+    width: 350px;
+    margin-right: 0.5rem;
+  }
+  .subscribe-button {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin-top: 0;
+  }
+}
+
+.header__container {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__container-logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.banner__text-heading {
+  font-size: 3rem;
+}
+
+.banner__text-paragraph {
+  color: gray;
+}
+
+.banner {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.banner__searchbar {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.banner__subscribe {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,1 +1,14 @@
 @import 'text';
+
+.banner{
+    padding:5rem 0;
+    text-align: center;
+    &__searchbar{
+        margin:auto;
+        margin-bottom: 2rem;
+    }
+
+    &__subscribe{
+        margin-top:1rem;
+    }
+}

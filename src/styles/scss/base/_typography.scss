@@ -1,0 +1,18 @@
+
+h1, h2, h3{
+    margin-bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+input, button{
+    font-family: inherit;
+}
+
+input{
+    &::placeholder{
+        opacity: 0.5;
+    }
+}
