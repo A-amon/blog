@@ -15,7 +15,7 @@ The API used is provided by SoftwareQ
 * https://softwareq-merdeka-api.azure-api.net/blog/v1/ListAll
 * https://softwareq-merdeka-api.azure-api.net/blog/v1/ById?Id=[ID]
 
-Postman is used to test the API provided and use the data returned locally before setting up fetch in app  
+Postman is used to test the API provided and the returned data is used locally before setting up fetch in app  
 - Avoid spamming requests when re-rendering component upon updates
 
 ## Styling
