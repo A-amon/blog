@@ -17,6 +17,9 @@ The API used is provided by SoftwareQ
 
 Postman is used to test the API provided and use the data returned locally before setting up fetch in app  
 - Avoid spamming requests when re-rendering component upon updates
+
+## Styling
+This project follows the [5-1 SCSS Architecture](https://matthewelsom.com/blog/simple-scss-playbook.html) with some tweaks, according to file organization for React components. E.g. An additional folder for storing container-related styles.
   
 ## What I learnt
 ### Components' names conflict
