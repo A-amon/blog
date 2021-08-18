@@ -26,7 +26,7 @@ const Home = () => {
                 onSubscribe={subscribeHandler} />
             <Hottest blog={hottest} />
             <Blogs blogs={filteredBlogs} />
-            <ThankYouModal show={showModal} onClose={event => setShowModal(false)} />
+            <ThankYouModal show={showModal} onClose={() => setShowModal(false)} />
         </>
     )
 }
