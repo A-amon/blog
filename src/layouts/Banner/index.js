@@ -15,7 +15,7 @@ const Banner = ({ expandedSearchbar, onExpand, onSubscribe, searchValue, onSearc
                     onChange={onSearch} />
                 <Text heading='Digital Publishing Insights'
                     paragraph='Weekly insights on digital publishing, beauty and fashion, and other exciting stuffs in your mailbox' />
-                <Subscribe className='banner__subscribe' />
+                <Subscribe className='banner__subscribe' onSubscribe={onSubscribe} />
             </Container>
         </section>
     )

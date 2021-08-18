@@ -7,10 +7,9 @@ const useHome = () => {
     const [hottest, setHottest] = useState(null)
     const [blogs, setBlogs] = useState([])
     const [filteredBlogs, setFilteredBlogs] = useState([])
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
-        document.body.addEventListener('click', closeSearchbar)
-
         getBlogs()
     }, [])
 
@@ -69,13 +68,22 @@ const useHome = () => {
         return info
     }
 
+    const subscribeHandler = (email) => {
+        setShowModal(true)
+    }
+
+    document.body.addEventListener('click', closeSearchbar)
+
     return {
         expandedSearchbar,
         setExpandedSearchbar,
         searchValue,
         handleSearch,
         hottest,
-        filteredBlogs
+        filteredBlogs,
+        showModal,
+        setShowModal,
+        subscribeHandler
     }
 }
 

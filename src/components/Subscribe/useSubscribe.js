@@ -11,17 +11,19 @@ const useSubscribe = (onSubscribe) => {
      * @param  {object} event
      */
     const validateForm = (event) => {
+        event.preventDefault()
+
         if (isEmpty(email)) {
-            event.preventDefault()
             setEmailError('This field cannot be empty')
         }
         else if (!isEmailValid(email)) {
-            event.preventDefault()
             setEmailError('Please enter a valid email')
         }
 
-        if (onSubscribe)
+        if (onSubscribe) {
+            setEmail('')
             onSubscribe({ email })
+        }
     }
 
     /**

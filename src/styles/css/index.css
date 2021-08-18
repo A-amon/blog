@@ -403,16 +403,40 @@ button {
 .subscribe-button {
   margin-top: 0.5rem;
   color: white;
-  background-color: #cd5b5b;
+  background-color: #0d6dfd;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
 }
 
 .subscribe-button:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.subscribe-button::before, .subscribe-button::after {
+  content: '';
+  height: 200px;
+  width: 50px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-animation: slideRight 0.6s linear 1 forwards;
+          animation: slideRight 0.6s linear 1 forwards;
+  pointer-events: none;
+}
+
+.subscribe-button::before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -425,6 +449,147 @@ button {
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin-top: 0;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    opacity: 0;
+    left: -50%;
+    width: 0;
+  }
+  50% {
+    opacity: 0.8;
+    left: 50%;
+    width: 100px;
+  }
+  100% {
+    opacity: 0;
+    left: 150%;
+    width: 0;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    left: -50%;
+    width: 0;
+  }
+  50% {
+    opacity: 0.8;
+    left: 50%;
+    width: 100px;
+  }
+  100% {
+    opacity: 0;
+    left: 150%;
+    width: 0;
+  }
+}
+
+.thanks__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.thanks__modal.show {
+  display: block;
+}
+
+.thanks__dialog {
+  height: 450px;
+  width: 95%;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: slideIn 0.5s 1 forwards;
+          animation: slideIn 0.5s 1 forwards;
+}
+
+.thanks__image, .thanks__body {
+  height: 50%;
+}
+
+.thanks__image-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.thanks__body {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.thanks__body-message {
+  color: gray;
+}
+
+.thanks__body-close {
+  background-color: #0d6dfd;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .thanks__dialog {
+    width: 400px;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 

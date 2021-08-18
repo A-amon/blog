@@ -7,7 +7,8 @@ module.exports = {
             '@layouts': path.resolve(__dirname, 'src/layouts'),
             '@components': path.resolve(__dirname, 'src/components'),
             '@containers': path.resolve(__dirname, 'src/containers'),
-            '@functions': path.resolve(__dirname, 'src/functions')
+            '@functions': path.resolve(__dirname, 'src/functions'),
+            '@assets': path.resolve(__dirname, 'src/assets')
         }
     }
 }

@@ -2,6 +2,7 @@ import Banner from '@layouts/Banner'
 import Blogs from '@layouts/Blogs'
 import Hottest from '@layouts/Hottest'
 import useHome from './useHome'
+import ThankYouModal from '@components/ThankYouModal'
 
 const Home = () => {
     const {
@@ -10,7 +11,10 @@ const Home = () => {
         searchValue,
         handleSearch,
         hottest,
-        filteredBlogs
+        filteredBlogs,
+        showModal,
+        setShowModal,
+        subscribeHandler
     } = useHome()
 
     return (
@@ -18,9 +22,11 @@ const Home = () => {
             <Banner expandedSearchbar={expandedSearchbar}
                 onExpand={event => setExpandedSearchbar(true)}
                 searchValue={searchValue}
-                onSearch={handleSearch} />
+                onSearch={handleSearch}
+                onSubscribe={subscribeHandler} />
             <Hottest blog={hottest} />
             <Blogs blogs={filteredBlogs} />
+            <ThankYouModal show={showModal} onClose={event => setShowModal(false)} />
         </>
     )
 }
