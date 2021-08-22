@@ -57,6 +57,13 @@ button {
   cursor: pointer;
 }
 
+.sr-only {
+  height: 0;
+  width: 0;
+  display: block;
+  overflow: hidden;
+}
+
 .blogs__list {
   display: -ms-grid;
   display: grid;
@@ -590,6 +597,94 @@ button {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loading::before, .loading::after {
+  content: '';
+  height: 2rem;
+  width: 2rem;
+  display: block;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+.loading::before {
+  -webkit-animation: loadingToRightAnim 1s alternate infinite;
+          animation: loadingToRightAnim 1s alternate infinite;
+  background: -webkit-gradient(linear, left top, right top, from(#0d6dfd), to(white));
+  background: linear-gradient(to right, #0d6dfd, white);
+}
+
+.loading::after {
+  -webkit-animation: loadingToLeftAnim 1s alternate infinite;
+          animation: loadingToLeftAnim 1s alternate infinite;
+  background: -webkit-gradient(linear, right top, left top, from(#cd5b5b), to(white));
+  background: linear-gradient(to left, #cd5b5b, white);
+}
+
+.loading-text {
+  position: absolute;
+  top: calc(100% + 1rem);
+  color: gray;
+}
+
+@-webkit-keyframes loadingToRightAnim {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+  }
+}
+
+@keyframes loadingToRightAnim {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+  }
+}
+
+@-webkit-keyframes loadingToLeftAnim {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    z-index: 1;
+  }
+  to {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+    z-index: -1;
+  }
+}
+
+@keyframes loadingToLeftAnim {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    z-index: 1;
+  }
+  to {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+    z-index: -1;
   }
 }
 

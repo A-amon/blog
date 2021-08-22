@@ -22,3 +22,10 @@ button{
     border:none;
     cursor: pointer;
 }
+
+.sr-only{
+    height:0;
+    width: 0;
+    display: block;
+    overflow: hidden;
+}

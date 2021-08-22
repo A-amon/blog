@@ -1,0 +1,52 @@
+
+.loading{
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    &::before,&::after{
+        content:'';
+        height:2rem;
+        width:2rem;
+        display: block;
+        border-radius: 50%;
+        margin:0 0.5rem;
+        position: relative;
+    }
+
+    &::before{
+        animation:loadingToRightAnim 1s alternate infinite;
+        background:linear-gradient(to right, $c-blue, $c-white);
+    }
+
+    &::after{
+        animation:loadingToLeftAnim 1s alternate infinite;
+        background:linear-gradient(to left, $c-indianred, $c-white);
+    }
+
+    &-text{
+        position: absolute;
+        top:calc(100% + 1rem);
+        color:$c-gray;
+    }
+}
+
+@keyframes loadingToRightAnim {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(3rem);
+    }
+}
+
+@keyframes loadingToLeftAnim {
+    from{
+        transform: translateX(0);
+        z-index: 1;
+    }
+    to{
+        transform:translateX(-3rem);
+        z-index: -1;
+    }
+}
